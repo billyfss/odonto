@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <title>Excêlencia Odontologia</title>
+	<link rel="stylesheet" href="telas.css">
+	<link rel="stylesheet"  href="estilo.css">
+	<link rel="shortcut icon" href="http://www.excelenciaodonto.com/images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+  	<style>
+            div#bb{
+  background-image:url("imagens/back2.png"); margin:-73px 0px 0px 0px;
+  
+    }
+	</style>
+	 <div id="interface">
+	 <header id="cabecalho">
+	 <img src="imagens/excelencia-odontologia.png">
+	    <h1>Aqui você volta a sorrir </h1>
+	   
+     <nav id="menuL">
+	    <ul type="disc">
+	      <li> <a href= "index.html"> Home </a> </li>
+	      <li> <a href= "alteraCliente.html"> Alterar</a> </li> 
+		  <li> <a href= "listarCliente.html"> Listar de Clientes</a> </li>  
+	    </ul>
+	 </nav>
+     </header>
+	  <section id="corpoCli">
+     <div id="bb">
+             <h3>Alterar Cliente</h3>
+         <form method="post" action="gerenciar_cliente.do">
+              <fieldset>
+              
+             <label for="name">Nome:</label>
+             <input type="text" value="" name="nome"  id="name" required/>
+             
+            <label for="mail">Endereco:</label>
+            <input type="text" value="" name="endereco" id="mail" required/>
+            
+            <label for="mail">Data de Nascimento:</label>
+            <input type="text" value="" name="nascimento" id="data" required/>
+            
+            <label>Sexo:</label>
+            <input type="text" value="" name="sexo" required/>
+            
+             <label for="mail">Convênio:</label>
+            <input type="text" value="" name="convenio" id="convenio" required/>
+            
+            <label for="mail">Telefone:</label>
+            <input type="text" value="" name="telefone" id="telefone" required/>
+            
+
+        <br/>
+         <input type="hidden" name="cpf" value=""/>
+            <input type="hidden" name="op" value="alterar"/>
+            <button class ="button button2" type="submit" value="salvar">Salvar</button>
+             </fieldset>
+            
+    </form>
+	</div>
+    <footer id="rodape">
+	    <p> Excelência Odontologia © 2017 Todos os Direitos Reservados <br>
+	    </p>
+    </footer>
+       </div>
+        
+</body>
+</html>
+

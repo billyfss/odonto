@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+	<meta charset="UTF-8"/> 
+	<title>Excêlencia Odontologia</title>
+	<link rel="stylesheet"  href="estilo.css">
+	<link rel="stylesheet"  href="cadastroC.css">
+	
+	<link rel="shortcut icon" href="http://www.excelenciaodonto.com/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+  
+  <div id="interfaceA">
+	 <header id="cabecalho">
+	    <h1>Aqui você volta a sorrir </h1>
+	   
+     <nav id="menuL">
+	    <ul type="disc">
+	      <li> <a href= "index.html"> Home </a> </li>
+	      <li> <a href= "especialidade.html"> Especialidades</a> </li> 
+	      <li> <a href= "contato.html">contato</a> </li>
+	    </ul>
+	 </nav>
+     </header>
+ <section id="corpoA">
+
+        <form method="get" action="gerenciar_agendamento.do">
+		  <h1>Agendamento de Consulta</h1>
+		<fieldset>
+		    
+            Data:<input type="date" name="data" size="60" min="<%=data%>" required/><br/>
+            Hora:<input type="time" name="hora" size="60" min="08:00" max="18:00" required/><br/>
+            <input type="hidden" name="situacao" value="1" checked>  
+
+            Dentista:
+            <select name="id_funcionario" size="1" required>
+                <option>
+                    Selecione o Dentista
+                </option>
+                <%
+                    for (Funcionario fd : dentista) {
+                %>
+                <option value="<%=fd.getCpf()%>" >
+                <p>    <%=fd.getNome()%><p/>
+                </option><br/>
+                <%
+                    }
+                %>
+            </select><br>
+
+
+
+            Cliente:<input type="text" required="Insira um CPF valido" name="cpf" /><br>
+            Serviço:
+            <select name="id_servico" size="1" required>
+                <option>
+                    Selecione o Serviço
+                </option>
+                <%
+                    for (Servico sl : lista) {
+                %>
+                <option value="<%=sl.getId()%>" >
+                <p>  <%=sl.getNome()%> <p/>
+                </option><br/>
+                <%
+                    }
+                %>
+            </select>
+            <br>
+            <input type="hidden" name="op" value="inserir"/><br/>
+     
+			 <button class=" button button1" type="submit"><a href="form_inserir_agendamento.jsp">Agendar</a></button> 
+		    <button class="button button2"type="submit"><a href="form_inserir_agendamento.jsp">Novo<a/></button>
+ 
+	    </fieldset>
+        </form>
+     
+	   
+  </section>
+  
+	<footer id="rodape">
+	<p> Excelência Odontologia © 2017 Todos os Direitos Reservados <br>
+	 <a href ="https://pt-br.facebook.com/excelenciaodontoriacho/" target=_blank> <h2>FACEBOOK | <a href ="https://www.instagram.com/excelenciaodonto/" target=_blank> INSTAGRAM</h2>
+	</p>
+	</footer>
+	</div>
+	</body>
+  </html>
